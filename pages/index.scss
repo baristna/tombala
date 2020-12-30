@@ -1,0 +1,122 @@
+.layout {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.occurs {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: calc(100% - 200px);
+  background: #EEE;
+}
+
+.box {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #999;
+  border: 1px solid #ccc;
+  transition: all 1s;
+
+  &.drawed {
+    color: #000;
+    background-color: #ccff33;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #70e000;
+    font-size: 24px;
+  }
+
+  &.lastnumber {
+    background-color: #ff477e;
+    border: 1px solid #ff0a54;
+    color: #fff;
+  }
+}
+
+.btn {
+  background: #fdc500;
+  color: #fff;
+  border-radius: 4px;
+  height: 50px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background: #ffd500;
+  }
+
+  &.red {
+    background-color: #ff0a54;
+
+    &:hover {
+      background: #ff477e;
+    }
+  }
+}
+
+.divider {
+  flex-grow: 1;
+}
+
+.drawlist {
+  padding-top: 20px;
+  max-height: 100%;
+  overflow: scroll;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawlistitem {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.pop {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30vh;
+  height: 50vh;
+  width: 50vh;
+  border-radius: 25vh;
+  background: #ccc;
+  transition: opacity 0;
+
+  &.hide {
+    transition: opacity 3s;
+    opacity: 0;
+  }
+}
